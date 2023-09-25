@@ -1,3 +1,44 @@
-[gd_scene format=3 uid="uid://pqmhj82espt8"]
+[gd_scene load_steps=4 format=3 uid="uid://pqmhj82espt8"]
+
+[ext_resource type="PackedScene" uid="uid://ctlk5w31ma870" path="res://Entities/MilitaryBase/military_base.tscn" id="1_x1u5y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j1hgc"]
+size = Vector2(46, 656)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aj26a"]
+size = Vector2(1233, 50)
 
 [node name="MainGame" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="border" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="border"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border/StaticBody2D"]
+position = Vector2(-599, 0)
+shape = SubResource("RectangleShape2D_j1hgc")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="border"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border/StaticBody2D2"]
+position = Vector2(600, 0)
+shape = SubResource("RectangleShape2D_j1hgc")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="border"]
+position = Vector2(600, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border/StaticBody2D3"]
+position = Vector2(-592.5, -352)
+shape = SubResource("RectangleShape2D_aj26a")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="border"]
+position = Vector2(1200, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border/StaticBody2D4"]
+position = Vector2(-1192, 344)
+shape = SubResource("RectangleShape2D_aj26a")
+
+[node name="MilitaryBase" parent="." instance=ExtResource("1_x1u5y")]
+position = Vector2(-432, -48)

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctlk5w31ma870"]
+
+[ext_resource type="Texture2D" uid="uid://d4d0vr5f5bqwy" path="res://Sprites/militaryBase.png" id="1_1mdqe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ysu1d"]
+size = Vector2(128, 64)
+
+[node name="MilitaryBase" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_1mdqe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ysu1d")
