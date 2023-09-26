@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxlre0fu8pbbd"]
+
+[ext_resource type="Texture2D" uid="uid://bcleih8rqdi1g" path="res://Sprites/tank.png" id="1_ldjnv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u8wrn"]
+size = Vector2(120, 80)
+
+[node name="tank" type="CharacterBody2D"]
+
+[node name="Tank" type="Sprite2D" parent="."]
+scale = Vector2(0.303077, 0.303077)
+texture = ExtResource("1_ldjnv")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 8)
+shape = SubResource("RectangleShape2D_u8wrn")

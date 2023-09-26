@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://cal178ofwf316"]
+
+[ext_resource type="Script" path="res://Entities/HUD/PosLabel.gd" id="1_jyguh"]
+[ext_resource type="Script" path="res://Entities/HUD/main_ui.gd" id="1_wipng"]
+[ext_resource type="Texture2D" uid="uid://dh8j7emerf87b" path="res://Sprites/soldier.png" id="3_lqfai"]
+
+[node name="MainUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wipng")
+
+[node name="PosLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 52.0
+text = "X:
+Y:"
+script = ExtResource("1_jyguh")
+
+[node name="XSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_top = 72.0
+offset_right = 168.0
+offset_bottom = 112.0
+max_value = 800.0
+value = 400.0
+
+[node name="YSlider" type="HSlider" parent="."]
+offset_top = 144.0
+offset_right = 168.0
+offset_bottom = 184.0
+max_value = 600.0
+value = 300.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-233, 509)
+scale = Vector2(0.068, 0.0677656)
+texture = ExtResource("3_lqfai")

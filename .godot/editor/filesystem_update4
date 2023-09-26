@@ -1,2 +1,6 @@
 res://Scenes/main_game.tscn
 res://Entities/MilitaryBase/military_base.tscn
+res://Entities/HUD/main_ui.tscn
+res://Entities/HUD/PosLabel.gd
+res://Entities/HUD/main_ui.gd
+res://Entities/Tank/tank.tscn

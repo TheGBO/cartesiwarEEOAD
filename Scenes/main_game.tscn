@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://pqmhj82espt8"]
+[gd_scene load_steps=5 format=3 uid="uid://pqmhj82espt8"]
 
 [ext_resource type="PackedScene" uid="uid://ctlk5w31ma870" path="res://Entities/MilitaryBase/military_base.tscn" id="1_x1u5y"]
+[ext_resource type="PackedScene" uid="uid://cal178ofwf316" path="res://Entities/HUD/main_ui.tscn" id="2_0wx13"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j1hgc"]
 size = Vector2(46, 656)
@@ -41,4 +42,11 @@ position = Vector2(-1192, 344)
 shape = SubResource("RectangleShape2D_aj26a")
 
 [node name="MilitaryBase" parent="." instance=ExtResource("1_x1u5y")]
-position = Vector2(-432, -48)
+position = Vector2(-328, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainUI" parent="CanvasLayer" instance=ExtResource("2_0wx13")]
+anchors_preset = 10
+anchor_bottom = 0.0
+grow_vertical = 1

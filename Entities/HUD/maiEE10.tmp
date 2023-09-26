@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cal178ofwf316"]
+
+[ext_resource type="Script" path="res://Entities/HUD/PosLabel.gd" id="1_jyguh"]
+[ext_resource type="Script" path="res://Entities/HUD/main_ui.gd" id="1_wipng"]
+
+[node name="MainUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wipng")
+
+[node name="PosLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 52.0
+text = "X:
+Y:"
+script = ExtResource("1_jyguh")

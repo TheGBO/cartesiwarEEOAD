@@ -13,7 +13,14 @@ config_version=5
 config/name="CartesiWar"
 run/main_scene="res://Scenes/main_game.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
+boot_splash/image="res://Sprites/logoart.png"
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=800
+window/size/viewport_height=600
+window/stretch/mode="viewport"
 
 [dotnet]
 
